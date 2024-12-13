@@ -1,0 +1,71 @@
+.section-task-form {
+	max-width: 80rem;
+	width: 100%;
+	margin: 0 auto 4rem;
+}
+
+.add-task-form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.2rem;
+	background-color: #ffffff;
+	padding-inline: 1.6rem;
+	border-radius: 12px;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+.dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.dot {
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 100%;
+
+	&.animation {
+		animation: dots 0.75s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+	}
+
+	&:first-child {
+		background-color: #99d98c;
+		animation-delay: 0s;
+	}
+
+	&:nth-child(2) {
+		background-color: #ffba08;
+		animation-delay: 0.1s;
+	}
+
+	&:last-child {
+		background-color: #d00000;
+		animation-delay: 0.2s;
+	}
+}
+
+.task-input-container {
+	flex: 1;
+}
+
+.task-input {
+	height: 4rem;
+	width: 100%;
+	border: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+@keyframes dots {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-4px);
+	}
+}
