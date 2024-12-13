@@ -1,5 +1,4 @@
 import express from "express";
-import http from "http";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
@@ -18,7 +17,6 @@ import taskRoutes from "./routes/Task.route";
 import prisma from "./configs/database.config";
 
 const app = express();
-const httpServer: ReturnType<typeof http.createServer> = http.createServer(app);
 
 logger.info("================================================================");
 logger.info("Initializing API");
@@ -66,7 +64,7 @@ const startServer = async () => {
     logger.info("Database connected successfully");
 
     // Start the server
-    const server = httpServer.listen(config.PORT, () => {
+    const server = app.listen(config.PORT, () => {
       logger.info(`Server running on port ${config.PORT}`);
       logger.info(`Environment: ${process.env.NODE_ENV}`);
     });
