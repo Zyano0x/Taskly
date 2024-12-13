@@ -45,7 +45,12 @@ logger.info("================================================================");
 app.use("/api/v1/tasks", taskRoutes);
 
 app.get("/health", (req, res) => {
-  res.status(200).json({ status: "healthy", timestamp: new Date() });
+  try {
+    res.status(200).json({ status: "healthy", timestamp: new Date() });
+  } catch (error) {
+    logger.error(error, "==> ERROR <==");
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 });
 
 logger.info("================================================================");
