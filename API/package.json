@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "build/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npx prisma generate && tsc",
     "dev": "NODE_ENV=development nodemon src/server.ts | pino-pretty",
     "prod": "NODE_ENV=production nodemon src/server.ts | pino-pretty"
   },

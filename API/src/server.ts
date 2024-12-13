@@ -36,7 +36,7 @@ app.use(
     limit: 100,
     windowMs: 60 * 60 * 1000,
     handler: handleRateLimitError,
-  }),
+  })
 );
 app.use(cors());
 app.use(cookieParser());
