@@ -11,7 +11,7 @@ Taskly is a productivity application designed to help you manage tasks effective
 ## Tech Stack
 
 - **Framework:** [Next.js](https://nextjs.org)
-- **Styling:** [CSS Module]
+- **Styling:** [CSS Module](#)
 - **Database:** [Supabase](https://supabase.com/)
 - **ORM:** [Prisma ORM](https://www.prisma.io/orm)
 - **Validation:** [Zod](https://zod.dev)
