@@ -2,7 +2,7 @@
 
 Taskly is a productivity application designed to help you manage tasks effectively on desktop and mobile devices.
 
-[![Taskly](/UI/public/screenshot.png)](https://taskly-ui.vercel.app)
+[![Taskly](Taskly/UI/public/screenshot.png)](https://taskly-ui.vercel.app)
 
 ## Tech Stack
 
